@@ -37,7 +37,7 @@ console.log(daugybaV2(3, 2));
 console.log(daugybaV2(1, 3));
 
 
-// Funkcija pavadinimu “skaitmenuKiekisSkaiciuje” 2:
+// Funkcija pavadinimu “skaitmenuKiekisSkaiciuje”:
 console.log();
 console.log('Skaitmenu Kiekis Skaiciuje');
 console.log('--------------------------');
@@ -68,10 +68,14 @@ console.log(skaitmenuKiekisSkaiciuje(true));
 console.log(skaitmenuKiekisSkaiciuje("asd"));
 console.log(skaitmenuKiekisSkaiciuje(NaN));
 
-const asd = NaN < Infinity ? true : false;
+// Funkcija pavadinimu “didziausiasSkaiciusSarase”:
+console.log();
+console.log('Didziausias Skaicius Sarase');
+console.log('--------------------------');
 
-console.log(asd);
-
+function didziausiasSkaiciusSarase(a) {
+    
+}
 
 
 
