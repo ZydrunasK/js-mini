@@ -1,0 +1,19 @@
+{
+  "name": "js-mini",
+  "version": "1.0.0",
+  "type":"module",
+  "main": "index.js",
+  "scripts": {
+    "play": "node --watch play.js",
+    "mini1": "node --watch mini1.js",
+    "mini2": "node --watch mini2.js",
+    "mini3": "node --watch mini3.js",
+    "mini4": "node --watch mini4.js",
+    "mini5": "node --watch mini5.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
