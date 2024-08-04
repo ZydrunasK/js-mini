@@ -7,68 +7,81 @@ console.log("Ciklo for panaudojimas");
 
 console.log("----1----");
 console.log();
-console.log("----a----");
-let sumA = 0;
-
+let a = 0;
 for (let i = 0; i <= 0; i++) {
-  sumA += i;
+    a += i;
 }
-console.log('intervalas 0 ... 0');
-console.log('suma - ', sumA);
+console.log(`a. sum is ${a}`);   
+console.log('---------');
 
 
-console.log("----b----");
-let sumB = 0;
+let b = 0;
 for (let i = 0; i <= 4; i++) {
-  sumB += i;
+    b += i;
 }
-console.log('intervalas 0 ... 4');
-console.log('suma - ', sumB);
+console.log(`b. sum is ${b}`);   
+console.log('---------');
 
 
-console.log("----c----");
-let sumC = 0;
+let c = 0;
 for (let i = 0; i <= 100; i++) {
-  sumC += i;
+    c += i;
 }
-console.log('intervalas 0 ... 100');
-console.log('suma - ', sumC);
+console.log(`c. sum is ${c}`);   
+console.log('---------');
 
 
-console.log("----d----");
-let sumD = 0;
-for (let i = 0; i <= 815; i++) {
-  sumD += i;
+let d = 0;
+for (let i = 574; i <= 815; i++) {
+    d += i;
 }
-console.log('intervalas 574 ... 815');
-console.log('suma - ', sumD);
+console.log(`d. sum is ${d}`);   
+console.log('---------');
 
 
-console.log("----e----");
-let sumE = 0;
+let e = 0;
 for (let i = -50; i <= 50; i++) {
-  sumE += i;
+    e += i;
 }
-console.log('intervalas -50 ... 50');
-console.log('suma - ', sumE);
+console.log(`e. sum is ${e}`);   
+console.log('---------');
 
 
-console.log("----f----");
-let sumF = 0;
+let f = 0;
 for (let i = -70; i <= 30; i++) {
-  sumF += i;
+    f += i;
 }
-console.log('intervalas -70 ... 30');
-console.log('suma - ', sumF);
-
+console.log(`f. sum is ${f}`); 
 
 console.log();
 console.log("----2----");
-for (let i = base.ap.length - 1; i >= 0; i--) {
-  console.log(base.ap[i]);
+console.log();
+
+
+const word = 'apple';
+let revWord = '';
+for (let i = word.length - 1; i >= 0; i--) {
+    revWord += word[i];
+
 }
+console.log(revWord);
+
+const sentence = 'Apples taste great!';
+let revSentence = '';
+for (let i = sentence.length - 1; i >= 0; i--) {
+    revSentence += sentence[i];
+
+}
+console.log(revSentence);
 
 // console.clear();
+
+console.log();
+console.log("----3----");
+console.log();
+console.log("----a----");
+
+
 
 function floatTxt1(n1, n2, n3,) {
   return `1) Skaičių intervale tarp ${n1} ir ${n2}, besidalijančių be liekanos iš 3 yra ${n3} vienetai.`
@@ -80,10 +93,7 @@ function floatTxt3(n1, n2, n3,) {
   return `3) Skaičių intervale tarp ${n1} ir ${n2}, besidalijančių be liekanos iš 7 yra ${n3} vienetai.`
 }
 
-console.log();
-console.log("----3----");
-console.log();
-console.log("----a----");
+
 let div3a = 0;
 for (let i = 0; i <= 11; i++) {
   if (i % 3 === 0) {
