@@ -9,6 +9,7 @@
     "mini2": "node --watch mini2.js",
     "mini3": "node --watch mini3.js",
     "mini4": "node --watch mini4.js",
+    "mini4-1": "node --watch mini4-1.js",
     "mini5": "node --watch mini5.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

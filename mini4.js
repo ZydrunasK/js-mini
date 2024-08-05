@@ -1,7 +1,113 @@
 import * as base from './mini1.js';
 
+console.log("----1----");
+console.log();
 
-// Ciklo for panaudojimas
+function sumaIntervale(a, b) {
+  // 1. validation of information (params)
+  if (typeof a !== 'number') {
+    return 'ERROR: pirma reiksme turi buti skaicius';
+  }
+  if (a === Infinity || a === -Infinity) {
+    return 'ERROR: biski perdaug nori';
+  }
+  if (isNaN(a)) {
+    return 'ERROR: pirma reiksme turi buti skaicius';
+  }
+  if (a % 1 !== 0) {
+    return 'ERROR: pirma reiksme turi buti sveikas skaicius';
+  }
+
+  if (typeof b !== 'number') {
+    return 'ERROR: antra reiksme turi buti skaicius';
+  }
+  if (b === Infinity || b === -Infinity) {
+    return 'ERROR: biski perdaug nori';
+  }
+  if (isNaN(b)) {
+    return 'ERROR: pirma reiksme turi buti skaicius';
+  }
+  if (b % 1 !== 0) {
+    return 'ERROR: antra reiksme turi buti sveikas skaicius';
+  }
+
+  if (a > b) {
+    return 'ERROR: pirma reiksme turi buti didesne uz antra';
+  }
+  // 2. logic
+    let rez = 0;
+    for (let i = a; i <= b; i++) {
+      rez += i;
+    }
+
+  // 3. results of logic validation
+    if (a % 1 !== 0) {
+      return 'ERROR: '
+    }
+  // 4. result
+  return rez;
+}
+
+console.log('a. ', sumaIntervale(0, 0));
+console.log('b. ', sumaIntervale(0, 4));
+console.log('c. ', sumaIntervale(0, 100));
+console.log('d. ', sumaIntervale(574, 815));
+console.log('e. ', sumaIntervale(-50, 50));
+console.log('f. ', sumaIntervale(-70, 30));
+
+
+console.log();
+console.log("----2----");
+console.log();
+
+function wordRev(str) {
+  let revWord = ''
+  for (let i = str.length - 1; i >= 0; i--) {
+    revWord += str[i];
+}
+return revWord;
+}
+
+const word = 'apple';
+let revWord = '';
+
+console.log(wordRev('apple'));
+console.log(wordRev('stinky tacocat'));
+
+// console.clear();
+
+console.log();
+console.log("----3----");
+console.log();
+console.log("----a----");
+
+
+
+function divByInArray(start, end, div) {
+  let base = 0;
+
+  for (let i = start; i <= end; i++) {
+    if (i % div === 0) {
+      base += 1;
+    }  
+  }
+  return `Skaičių intervale tarp ${start} ir ${end}, besidalijančių be liekanos iš ${div} yra ${base}.`
+}
+console.log(divByInArray(0, 11, 3));
+console.log(divByInArray(0, 11, 5));
+console.log(divByInArray(0, 11, 7));
+console.log("----b----");
+console.log(divByInArray(8, 31, 3));
+console.log(divByInArray(8, 31, 5));
+console.log(divByInArray(8, 31, 7));
+console.log("----c----");
+console.log(divByInArray(-18, 18, 3));
+console.log(divByInArray(-18, 18, 5));
+console.log(divByInArray(-18, 18, 7));
+
+/* first version before i learned new stuff in class
+
+// Ciklo for panaudojimas (cycle)
 console.log();
 console.log("Ciklo for panaudojimas");
 
@@ -57,34 +163,6 @@ for (let i = -70; i <= 30; i++) {
   f += i;
 }
 console.log(`f. sum is ${f}`); 
-
-console.log();
-console.log("----2----");
-console.log();
-
-
-const word = 'apple';
-let revWord = '';
-for (let i = word.length - 1; i >= 0; i--) {
-    revWord += word[i];
-
-}
-console.log(revWord);
-
-const sentence = 'Apples taste great!';
-let revSentence = '';
-for (let i = sentence.length - 1; i >= 0; i--) {
-    revSentence += sentence[i];
-
-}
-console.log(revSentence);
-
-// console.clear();
-
-console.log();
-console.log("----3----");
-console.log();
-console.log("----a----");
 
 
 
@@ -178,119 +256,6 @@ console.log();
 console.log(floatTxt2(-18, 18, div5c));
 console.log();
 console.log(floatTxt3(-18, 18, div7c));
-
-console.clear();
-
-// -----------darbas pamokoje------------
-
-
-function sumaIntervale(a, b) {
-  // 1. validation of information (params)
-  if (typeof a !== 'number') {
-    return 'ERROR: pirma reiksme turi buti skaicius';
-  }
-  if (a === Infinity || a === -Infinity) {
-    return 'ERROR: biski perdaug nori';
-  }
-  if (isNaN(a)) {
-    return 'ERROR: pirma reiksme turi buti skaicius';
-  }
-  if (a % 1 !== 0) {
-    return 'ERROR: pirma reiksme turi buti sveikas skaicius';
-  }
-
-  if (typeof b !== 'number') {
-    return 'ERROR: antra reiksme turi buti skaicius';
-  }
-  if (b === Infinity || b === -Infinity) {
-    return 'ERROR: biski perdaug nori';
-  }
-  if (isNaN(b)) {
-    return 'ERROR: pirma reiksme turi buti skaicius';
-  }
-  if (b % 1 !== 0) {
-    return 'ERROR: antra reiksme turi buti sveikas skaicius';
-  }
-
-  if (a > b) {
-    return 'ERROR: pirma reiksme turi buti didesne uz antra';
-  }
-  // 2. logic
-    let rez = 0;
-    for (let i = a; i <= b; i++) {
-      rez += i;
-    }
-
-  // 3. results of logic validation
-    if (a % 1 !== 0) {
-      return 'ERROR: '
-    }
-  // 4. result
-  return rez;
-
-}
-
-console.log(sumaIntervale(0, 0));
-console.log(sumaIntervale(0, 4));
-console.log(sumaIntervale(0, 100));
-console.log(sumaIntervale(574, 815));
-console.log(sumaIntervale(-50, 50));
-console.log(sumaIntervale(-70, 30));
-console.log(sumaIntervale(-70, 30,));
-console.log(sumaIntervale(0, NaN));
-console.log(sumaIntervale(0, Infinity));
-console.log(sumaIntervale(Infinity, 5));
-
-console.log(sumaIntervale(0, '0'));
-console.log(sumaIntervale('0', 0));
-console.log(sumaIntervale(777, true));
-console.log(sumaIntervale(true, 777));
-console.log(sumaIntervale(true, false));
-console.log(sumaIntervale([], 777));
-console.log(sumaIntervale([], [777]));
-console.log(sumaIntervale([], {}));
-console.log(sumaIntervale({}, [777]));
-console.log(sumaIntervale(null, null));
-console.log(sumaIntervale(undefined, 12));
-console.log(sumaIntervale(sumaIntervale, 12));
-
-console.log(sumaIntervale(10, NaN));
-console.log(sumaIntervale(NaN, 10));
-
-console.log(sumaIntervale());
-console.log(sumaIntervale(10));
-
-console.log(sumaIntervale(10.2, 14,6));
-console.log(sumaIntervale(10 , 5));
-
-console.clear();
-
-function sRev(s) {
-  if (typeof s !== 'string') {
-    return 'ERROR: reikia duoti string tipo reiksme'
-  }
-  if (typeof s === '') {
-    return 'ERROR: Nera ivesta reiksme'
-  }
-
-  let revStr = '';
-  for (let i = s.length - 1; i >= 0; i--) {
-    revStr += s[i];
-  }
-  return revStr;
-}
-
-console.log(sRev('tree'));
-console.log(sRev('tacocat'));
-console.log(sRev(1));
-console.log(sRev(true));
-console.log(sRev(null));
-console.log(sRev({}));
-console.log(sRev([]));
-console.log(sRev());
-
-
-
-
+ */
 
 
