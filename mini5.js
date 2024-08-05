@@ -44,23 +44,24 @@ console.log('--------------------------');
  
 
 function skaitmenuKiekisSkaiciuje(a) {
-let n = a;
-if (n < Infinity) {
-if (typeof n !== "number") {
-    return 'Pateikta netinkamo tipo reikšmė.';   
-} else if (n % 1 !== 0) {
-    n = `${a}`;
-    let nL = n.length - 1;
-    return `1. rezultatas: ${nL}`;
-} else {
-    n = `${a}`;
-    let nL = n.length;
-    return `1. rezultatas: ${nL}`;
-}
-} else {
-    return 'Pateikta netinkamo tipo reikšmė.'; 
-}
-}
+    let n = a;
+    if (n < Infinity) {
+        if (typeof n !== "number") {
+            return 'Pateikta netinkamo tipo reikšmė.';   
+            } else if (n % 1 !== 0) {
+                n = `${a}`;
+                let nL = n.length - 1;
+                return `1. rezultatas: ${nL}`;
+                } else {
+                    n = `${a}`;
+                    let nL = n.length;
+                    return `1. rezultatas: ${nL}`;
+        }
+    } else {
+        return 'Pateikta netinkamo tipo reikšmė.'; 
+    }
+};
+
 console.log(skaitmenuKiekisSkaiciuje(5));
 console.log(skaitmenuKiekisSkaiciuje(781));
 console.log(skaitmenuKiekisSkaiciuje(37060123456));
@@ -74,7 +75,14 @@ console.log('Didziausias Skaicius Sarase');
 console.log('--------------------------');
 
 function didziausiasSkaiciusSarase(a) {
-    
+    let s = a;
+    if (typeof s !== "array") {
+        return 'Pateikta netinkamo tipo reikšmė.';   
+    } else if (s[0] === undefined) {
+        return 'Pateiktas sąrašas negali būti tuščias.';   
+    }else {
+
+    }
 }
 
 
