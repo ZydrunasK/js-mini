@@ -6,50 +6,55 @@ console.log();
 console.log("Ciklo for panaudojimas");
 
 console.log("----1----");
+// -------------a----------------
 console.log();
 let a = 0;
 for (let i = 0; i <= 0; i++) {
-    a += i;
+  a += i;
 }
 console.log(`a. sum is ${a}`);   
-console.log('---------');
 
 
+// -------------b----------------
 let b = 0;
 for (let i = 0; i <= 4; i++) {
-    b += i;
+  b += i;
 }
 console.log(`b. sum is ${b}`);   
 console.log('---------');
 
 
+// -------------c----------------
 let c = 0;
 for (let i = 0; i <= 100; i++) {
-    c += i;
+  c += i;
 }
 console.log(`c. sum is ${c}`);   
 console.log('---------');
 
 
+// -------------d----------------
 let d = 0;
 for (let i = 574; i <= 815; i++) {
-    d += i;
+  d += i;
 }
 console.log(`d. sum is ${d}`);   
 console.log('---------');
 
 
+// -------------e----------------
 let e = 0;
 for (let i = -50; i <= 50; i++) {
-    e += i;
+  e += i;
 }
 console.log(`e. sum is ${e}`);   
 console.log('---------');
 
 
+// -------------f----------------
 let f = 0;
 for (let i = -70; i <= 30; i++) {
-    f += i;
+  f += i;
 }
 console.log(`f. sum is ${f}`); 
 
