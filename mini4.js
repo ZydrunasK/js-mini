@@ -263,6 +263,34 @@ console.log(sumaIntervale(10));
 console.log(sumaIntervale(10.2, 14,6));
 console.log(sumaIntervale(10 , 5));
 
+console.clear();
+
+function sRev(s) {
+  if (typeof s !== 'string') {
+    return 'ERROR: reikia duoti string tipo reiksme'
+  }
+  if (typeof s === '') {
+    return 'ERROR: Nera ivesta reiksme'
+  }
+
+  let revStr = '';
+  for (let i = s.length - 1; i >= 0; i--) {
+    revStr += s[i];
+  }
+  return revStr;
+}
+
+console.log(sRev('tree'));
+console.log(sRev('tacocat'));
+console.log(sRev(1));
+console.log(sRev(true));
+console.log(sRev(null));
+console.log(sRev({}));
+console.log(sRev([]));
+console.log(sRev());
+
+
+
 
 
 
