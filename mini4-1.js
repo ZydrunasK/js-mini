@@ -52,8 +52,8 @@ function sumaIntervale(a, b) {
   console.log(sumaIntervale(574, 815));
   console.log(sumaIntervale(-50, 50));
   console.log(sumaIntervale(-70, 30));
-  console.log(sumaIntervale(-70, 30,));
-  console.log(sumaIntervale(0, NaN));
+
+ /*  console.log(sumaIntervale(0, NaN));
   console.log(sumaIntervale(0, Infinity));
   console.log(sumaIntervale(Infinity, 5));
   
@@ -77,7 +77,7 @@ function sumaIntervale(a, b) {
   console.log(sumaIntervale(10));
   
   console.log(sumaIntervale(10.2, 14,6));
-  console.log(sumaIntervale(10 , 5));
+  console.log(sumaIntervale(10 , 5)); */
   
   // console.clear();
   
@@ -85,7 +85,7 @@ function sumaIntervale(a, b) {
     if (typeof s !== 'string') {
       return 'ERROR: reikia duoti string tipo reiksme'
     }
-    if (typeof s === '') {
+    if (s === '') {
       return 'ERROR: Nera ivesta reiksme'
     }
   
@@ -98,6 +98,8 @@ function sumaIntervale(a, b) {
   
   console.log(sRev('tree'));
   console.log(sRev('tacocat'));
+  console.log(sRev(''));
+  console.log('------------------');
   console.log(sRev(1));
   console.log(sRev(true));
   console.log(sRev(null));

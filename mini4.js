@@ -18,6 +18,7 @@ function sumaIntervale(a, b) {
     return 'ERROR: pirma reiksme turi buti sveikas skaicius';
   }
 
+
   if (typeof b !== 'number') {
     return 'ERROR: antra reiksme turi buti skaicius';
   }
@@ -31,20 +32,35 @@ function sumaIntervale(a, b) {
     return 'ERROR: antra reiksme turi buti sveikas skaicius';
   }
 
+
   if (a > b) {
     return 'ERROR: pirma reiksme turi buti didesne uz antra';
   }
   // 2. logic
     let rez = 0;
+    let sum = 0
+    if (a === 0) {
+        rez = b * (b + 1) / 2;
+    } else if (b === 0) {
+      rez = a * (a - 1) / 2;
+    } else if (a < 0 && b > 0) {
+      rez = b * (b + 1) / 2;
+      rez = a * (a - 1) / 2;
+    } else {
     for (let i = a; i <= b; i++) {
       rez += i;
     }
+    }
+
 
   // 3. results of logic validation
+
     if (a % 1 !== 0) {
       return 'ERROR: '
     }
+
   // 4. result
+
   return rez;
 }
 
@@ -78,10 +94,7 @@ console.log(wordRev('stinky tacocat'));
 
 console.log();
 console.log("----3----");
-console.log();
 console.log("----a----");
-
-
 
 function divByInArray(start, end, div) {
   let base = 0;
@@ -104,6 +117,34 @@ console.log("----c----");
 console.log(divByInArray(-18, 18, 3));
 console.log(divByInArray(-18, 18, 5));
 console.log(divByInArray(-18, 18, 7));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* first version before i learned new stuff in class
 
