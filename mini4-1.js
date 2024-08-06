@@ -79,7 +79,7 @@ function sumaIntervale(a, b) {
   console.log(sumaIntervale(10.2, 14,6));
   console.log(sumaIntervale(10 , 5));
   
-  console.clear();
+  // console.clear();
   
   function sRev(s) {
     if (typeof s !== 'string') {
